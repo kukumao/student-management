@@ -21,36 +21,32 @@ export default {
         skuPriceList: [
           {
             id: '1',
+            customerType: '1',
             customerTypeName: '客户类型1',
-            price: '123'
+            price: '123',
+            updatePrice: '456'
           },
           {
             id: '2',
+            customerType: '2',
             customerTypeName: '客户类型2',
-            price: '123'
+            price: '123',
+            updatePrice: '456'
           }
         ]
       },
       formRules: {}
     };
   },
-  created(){
-    this.form.skuPriceList.forEach(item => {
-      this.form['item'+ item.id] = item.price;
-    })
-  },
   methods: {
     //组件初始化
     componentInitHandler(id, list) {
       this.formRules['item' + id] = list;
-     
     },
     componentBlurHandler(id, val) {
       this.form['item' + id] = val;
-       alert("123")
     },
     sure() {
-      console.log(this.form)
       this.$refs['form'].validate(valid => {
         if (valid) {
           alert('校验OK');
@@ -63,4 +59,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.inputWidth-210 {
+  width: 210px;
+}
+.ml-150 {
+  margin-left: 150px;
+}
 </style>

@@ -63,4 +63,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.inputWidth-210 {
+  width: 210px;
+}
+.ml-150 {
+  margin-left: 150px;
+}
 </style>

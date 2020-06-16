@@ -34,10 +34,9 @@ export default {
       formRules: {}
     };
   },
-  created(){
+  mounted(){
     this.form.skuPriceList.forEach(item => {
-      this.form['item'+ item.id] = item.price;
-    })
+   
   },
   methods: {
     //组件初始化
@@ -63,4 +62,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.inputWidth-210 {
+  width: 210px;
+}
+.ml-150 {
+  margin-left: 150px;
+}
 </style>

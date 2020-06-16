@@ -34,7 +34,7 @@ export default {
       formRules: {}
     };
   },
-  created(){
+  mounted(){
     this.form.skuPriceList.forEach(item => {
       this.form['item'+ item.id] = item.price;
     })
@@ -43,11 +43,9 @@ export default {
     //组件初始化
     componentInitHandler(id, list) {
       this.formRules['item' + id] = list;
-     
     },
     componentBlurHandler(id, val) {
       this.form['item' + id] = val;
-       alert("123")
     },
     sure() {
       console.log(this.form)
@@ -63,4 +61,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.inputWidth-210 {
+  width: 210px;
+}
+.ml-150 {
+  margin-left: 150px;
+}
 </style>
